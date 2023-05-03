@@ -14,7 +14,7 @@ if ($db->connect_error) {
 if (isset($_POST['phone'])) {
     $phone = trim($_POST['phone']);
     
- 
+
     $query = "INSERT INTO calls (phone, created_at, updated_at, process) VALUES ('$phone', NOW(), NOW(), false)";
     $result = $db->query($query);
     
